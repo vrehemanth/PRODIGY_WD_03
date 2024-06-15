@@ -1,0 +1,126 @@
+* {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.turn-container {
+    width: 220px;
+    height: 100px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.turn-container h3 {
+    margin: 0;
+    padding: 10px 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #049158;
+    border-radius: 10px 10px 0 0;
+}
+
+.turn-container .turn-box {
+    border: 2px solid #034705;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 0 0 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.turn-container .turn-box:nth-child(even) {
+    border-left: none;
+    border-radius: 0 0 10px 0;
+}
+
+.turn-container .turn-box:hover {
+    background-color: #c8e6c9;
+}
+
+.turn-container .turn-box.active {
+    background-color: #a5d6a7;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110px;
+    height: 60px;
+    background-color: #4CAF50;
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #f1f1f1;
+}
+
+#results {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+#play-again {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#play-again:hover {
+    padding: 12px 25px;
+    background-color: #45a049;
+}
